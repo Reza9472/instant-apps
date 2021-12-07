@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+// import Dashboard from "./components/Dashboard";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -120,7 +121,8 @@ const queryToData = async ({ query }) => {
   }
 
   const response = await fetch(
-    "https://data.messari.io/api/v1/assets?fields=id,name,symbol,metrics/market_data/price_usd,metrics/market_data/ohlcv_last_24_hour",
+    // "https://data.messari.io/api/v1/assets?fields=id,name,symbol,metrics/market_data/price_usd,metrics/market_data/ohlcv_last_24_hour",
+    "https://data.messari.io/api/v1/markets/binance-btc-usdt/metrics/price/time-series?start=2020-01-01&end=2020-01-07",
     {
       method: "GET",
       redirect: "follow",
